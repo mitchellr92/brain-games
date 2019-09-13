@@ -1,47 +1,59 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .button {
-    border: 1px solid red;
-    width: 10%;
-    display: flex;
-    justify-content: center;
-    margin-top: 25px;
-    height: 25px;
+  border: 1px solid red;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  height: 25px;
 }
 
 .timer {
-    border: 1px solid green;
-    width: 10%;
-    display: flex;
-    justify-content: center;
-    margin: 25px;
+  border: 1px solid green;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  margin: 25px;
 }
 
 .button:hover {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+.button2 {
+  border: 1px solid blue;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.button2:hover {
+  cursor: pointer;
 }
 
 .slideBoard {
-    border: 2px solid red;
-    display: flex;
-    width: 30%;
-    flex-wrap: wrap;
-    justify-content: center;
+  border: 2px solid red;
+  display: flex;
+  width: 30%;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .tile {
-    border: 1px solid blue;
-    width: 32.98%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 175px;
+  border: 1px solid blue;
+  width: 32.98%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 175px;
 }
 
 .tile:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
