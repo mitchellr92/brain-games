@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import "./slidePuzzle";
+import "./slidePuzzle.css";
 
 class SlidePuzzle extends Component {
   constructor() {
@@ -71,7 +71,7 @@ class SlidePuzzle extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <div className="button">Randomize</div>
         {this.setState.winner && <h2>Winner!</h2>}
         <div className="timer">Time: {this.state.timer} seconds</div>
