@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import SlidePuzzle from './Components/slidePuzzle';
+import Home from './Components/Home/home';
 
 function App() {
   return (
-    <SlidePuzzle />
+    <Home />
   );
 }
 
