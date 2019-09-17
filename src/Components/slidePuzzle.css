@@ -21,13 +21,20 @@
   margin: 25px;
 }
 
+.timerButtons {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .button:hover {
   cursor: pointer;
 }
 
 .button2 {
   border: 1px solid blue;
-  width: 10%;
+  width: 40%;
   display: flex;
   justify-content: center;
   margin-bottom: 25px;
@@ -40,7 +47,8 @@
 .slideBoard {
   border: 2px solid red;
   display: flex;
-  width: 30%;
+  width: 600px;
+  height: 30%;
   flex-wrap: wrap;
   justify-content: center;
 }

@@ -19,12 +19,12 @@ class SlidePuzzle extends Component {
   }
 
   componentDidUpdate() {
-    if (
-      [...this.state.nums] === [1, 2, 3, 4, 5, 6, 7, 8, ""] ||
-      [...this.state.nums] === [3, 2, 1, 6, 5, 4, "", 8, 7]
-    ) {
+    if (this.state.nums === [1, 2, 3, 4, 5, 6, 7, 8, ""]) {
       this.setState({ winner: true });
     }
+    console.log("interval id", this.state.intervalID);
+    console.log("winner", this.state.winner);
+    console.log("numbers", this.state.nums);
   }
 
   componentWillUnmount() {
@@ -32,7 +32,7 @@ class SlidePuzzle extends Component {
   }
 
   startTimer() {
-    if (!this.intervalID) {
+    if (!this.state.intervalID) {
       let intervalID = setInterval(() => {
         this.setTime();
       }, 1000);
@@ -40,8 +40,15 @@ class SlidePuzzle extends Component {
     }
   }
 
+	// startTimer() {
+	// 	this.intervalID = setInterval(() => {
+	// 		this.setTime();
+	// 	}, 1000)
+	// };
+
   stopTimer() {
-    clearInterval(this.state.intervalID);
+    // console.log(this.state.intervalID)
+    // clearInterval(this.state.intervalID);
   }
 
   randomize = () => {
@@ -238,8 +245,13 @@ class SlidePuzzle extends Component {
         </div>
         {this.setState.winner && <h2>Winner!</h2>}
         <div className="timer">Time: {this.state.timer} seconds</div>
-        <div className="button2" onClick={this.stopTimer}>
-          Stop time
+        <div className="timerButtons">
+          <div className="button2" onClick={this.startTimer}>
+            Start Time
+          </div>
+          <div className="button2" onClick={this.stopTimer}>
+            Stop time
+          </div>
         </div>
         <div className="slideBoard">
           {this.state.nums.map((num, i) => {
